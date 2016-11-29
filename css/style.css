@@ -8,14 +8,16 @@ body {
 	background-color:#000000;
 	background-position:50% 50%;
 	background-attachment:fixed;
+	max-width: 800px;
+	margin: auto;
 }
 
-p,h1 {
+p,h1, li {
 	color:#FFFFFF;
 }
 
 #menu {
-	width:960px;
+	width:800px;
 	margin-left:auto;
 	margin-right:auto;
 	display:flex;

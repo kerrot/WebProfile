@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#alg {
+	display:flex;
+}
+
+#algText {
+	width: 70%;
+}
+
+.algImg img {
+	width: 100%;
+}
+
+.algImg {
+	width: 30%;
+}
