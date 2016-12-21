@@ -31,6 +31,14 @@ overlayOpacity: 0.8,
   animateFade: true,
 });
 </script>
+<link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCore.css" />
+<link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shThemeDefault.css" />
+<script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js"></script>
+<script type="text/javascript">
+   SyntaxHighlighter.config.clipboardSwf = 'syntaxhighlighter/scripts/clipboard.swf';
+   SyntaxHighlighter.all();
+</script>
 </head>
 
 <body>
@@ -64,51 +72,40 @@ overlayOpacity: 0.8,
 <p>【チーム構成】個人</p>
 <p>【工夫した点】
 <ul>
-	<li>ゲームエンジンではただ絵を画面のどこに描画する機能ではなく、ものをオブジェクト化し、ゲーム世界の座標に置くことで、より直感的でものの位置を決められます。さらに、階層化した（親子関係）オブジェクトは複雑な構造や相対位置を必要する状況にとても役に立ちます。例えば、箱の中にものがあって、箱を移動する時、中のものも一緒に移動します。親子関係だったら、ただ箱を移動するだけでいい、両方とも移動する必要がありません。このエンジンは以上の機能全部実現しました。</li>
-	<li>Unityではただオブジェクトに物理システム（RigidBody）と衝突判定（Collider）を付けるだけで物理の運動を行えます。システムを設計し、同じ形で実現しました。システムを構造は以下のように。最も困難の部分は運動状態の衝突判定です。一般的にオブジェクトを移動するには、大量な細かい瞬間移動で実現しました。もし一回の移動量が大きければ、ものを貫通する可能性があります。</li>
-	<li></li>
+	<li>ゲームエンジンではただ絵を画面のどこに描画する機能ではなく、ものをオブジェクト化し、ゲーム世界の座標に置くことで、より直感的でものの位置を決められます。さらに、階層化した（親子関係）オブジェクトは複雑な構造や相対位置を必要する状況にとても役に立ちます。例えば、箱の中にものがあって、箱を移動する時、中のものも一緒に移動します。親子関係だったら、ただ箱を移動するだけでいい、両方とも移動する必要がありません。このエンジンは以上の機能全部実現しました。
+	<div class="pic"><img src="img/readmeFBVR.jpg"/></div></li>
+	<li><p>Unityではただオブジェクトに物理システム（RigidBody）と衝突判定（Collider）を付けるだけで物理の運動を行えます。システムを設計し、同じ形で実現しました。システムを構造は以下:</p>
+	<div class="pic"><img src="img/readmeFBVR.jpg"/></div>
+	<p>最も困難の部分は運動状態の衝突判定です。一般的にオブジェクトを移動するには、大量な小さい瞬間移動で実現しました。もし一回の移動量が大きい場合、ものを貫通する可能性があります。よって一回の量を判断し、大きいの場合は半分の量で二回移動にします。そして移動する際には、X、Y軸に分けて、衝突になる前の位置に止まる。状況によってX、Y軸の優先度が違います。</p>
+	<div class="pic"><img src="img/readmeFBVR.jpg"/></div>
+	<li>UnityのアニメションではFlashのようなGUI(画像や図形を用いた操作方法)があり、直感的で便利な仕方でアニメションを作られます。その中心の概念はKey frameというものです。要は、最初と最後の絵を決めて、その間の部分は全部自動演算で生成します。このエンジンはソースコードでこの機能を実現しました。
+	<div class="pic"><img src="img/readmeFBVR.jpg"/></div></li>
 </ul>
 </p>
+<p>【使用例】
+<pre class="brush: cpp;">class AuthenticationService
+{
+    private EmailService msgService;
+    public AuthenticationService()
+    {
+        msgSevice = new EmailService(); // 建立用來發送驗證碼的物件
+    }
 
-<div class="swiper-container">
-        <div class="swiper-scrollbar"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" data-history="Slide 1">
-			<a href="img/list_h.png" rel="shadowbox" title="タイトル"><img src="img/list_h.png"></a>
-			</div>
-            <div class="swiper-slide" data-history="Slide 2">
-			<a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/YrxV762q0Yo"><iframe src="https://www.youtube.com/embed/YrxV762q0Yo"></iframe></a>
-			</div>
-            <div class="swiper-slide" data-history="Slide 3">
-			<a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/YrxV762q0Yo"><img src="./img/icon.png" alt="arc"></a>
-			</div>
-            <div class="swiper-slide" data-history="Slide 4">Slide 4</div>
-            <div class="swiper-slide" data-history="Slide 5">Slide 5</div>
-            <div class="swiper-slide" data-history="Slide 6">Slide 6</div>
-            <div class="swiper-slide" data-history="Slide 7">Slide 7</div>
-            <div class="swiper-slide" data-history="Slide 8">Slide 8</div>
-            <div class="swiper-slide" data-history="Slide 9">Slide 9</div>
-            <div class="swiper-slide" data-history="Slide 10">Slide 10</div>
-        </div>
-        
-    </div>
-	
-    <script src="./js/swiper.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            spaceBetween: 50,
-            slidesPerView: 5,
-            centeredSlides: false,
-            slideToClickedSlide: false,
-            grabCursor: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            scrollbar: '.swiper-scrollbar',
-            history: 'slide',
-        });
-    </script>
+    public bool TwoFactorLogin(string userId, string pwd)
+    {
+        // 檢查帳號密碼&#65292;若正確&#65292;則傳回一個包含使用者資訊的物件&#12290;          
+        User user = CheckPassword(userId, pwd);
+        if (user != null)
+        {
+            // 接著發送驗證碼給使用者&#65292;假設隨機產生的驗證碼為 "123456"&#12290;
+            this.msgService.Send(user, "您的登入驗證碼為 123456");
+            return true;
+        }
+        return false;
+    }
+}
+</pre>
+</p>
 </body>
 
 </html>

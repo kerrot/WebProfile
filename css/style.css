@@ -14,6 +14,12 @@ body {
 
 p,h1, li {
 	color:#FFFFFF;
+	text-shadow:
+		0px -1px #888,
+		1px 0px #888,
+		0px 1px #888,
+		-1px 1px #888,
+		4px 4px hsla(0,0%,0%,0.20);
 }
 
 #menu {
@@ -46,4 +52,8 @@ p,h1, li {
 
 #menu a:hover img {
     visibility: hidden;
+}
+
+.pic img {
+	width: 100%;
 }
