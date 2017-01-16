@@ -61,6 +61,8 @@ overlayOpacity: 0.8,
 
 <h1>Dxlib Mario</h1>
 
+<video src="img/Home.mp4" autoplay loop></video>
+
 <p>【紹介】Unityを参考して2Dのゲームエンジンを作りました。検証のため、マリオを試しに作りました。実現した機能は：</p>
 <p><ul>
 	<li>階層関係のオブジェクトシステム</li>
@@ -70,18 +72,17 @@ overlayOpacity: 0.8,
 <p>【ジャンル】ゲームエンジン</p>
 <p>【言語、ツール】C++, Visual Studio、Dxlib</p>
 <p>【チーム構成】個人</p>
-<p>【工夫した点】
+<p>【工夫した点】</p>
 <ul>
 	<li>ゲームエンジンではただ絵を画面のどこに描画する機能ではなく、ものをオブジェクト化し、ゲーム世界の座標に置くことで、より直感的でものの位置を決められます。さらに、階層化した（親子関係）オブジェクトは複雑な構造や相対位置を必要する状況にとても役に立ちます。例えば、箱の中にものがあって、箱を移動する時、中のものも一緒に移動します。親子関係だったら、ただ箱を移動するだけでいい、両方とも移動する必要がありません。このエンジンは以上の機能全部実現しました。
 	<div class="pic"><img src="img/readmeFBVR.jpg"/></div></li>
 	<li><p>Unityではただオブジェクトに物理システム（RigidBody）と衝突判定（Collider）を付けるだけで物理の運動を行えます。システムを設計し、同じ形で実現しました。システムを構造は以下:</p>
 	<div class="pic"><img src="img/readmeFBVR.jpg"/></div>
 	<p>最も困難の部分は運動状態の衝突判定です。一般的にオブジェクトを移動するには、大量な小さい瞬間移動で実現しました。もし一回の移動量が大きい場合、ものを貫通する可能性があります。よって一回の量を判断し、大きいの場合は半分の量で二回移動にします。そして移動する際には、X、Y軸に分けて、衝突になる前の位置に止まる。状況によってX、Y軸の優先度が違います。</p>
-	<div class="pic"><img src="img/readmeFBVR.jpg"/></div>
+	<div class="pic"><img src="img/readmeFBVR.jpg"/></div></li>
 	<li>UnityのアニメションではFlashのようなGUI(画像や図形を用いた操作方法)があり、直感的で便利な仕方でアニメションを作られます。その中心の概念はKey frameというものです。要は、最初と最後の絵を決めて、その間の部分は全部自動演算で生成します。このエンジンはソースコードでこの機能を実現しました。
 	<div class="pic"><img src="img/readmeFBVR.jpg"/></div></li>
 </ul>
-</p>
 <p>【使用例】
 <pre class="brush: cpp;">class AuthenticationService
 {
