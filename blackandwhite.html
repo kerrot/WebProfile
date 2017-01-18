@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html><head>
 <meta charset="UTF-8">
-<title>闇の光</title>
+<title>Light in the Dark</title>
 
 <link rel="stylesheet" href="css/style.css">
 <link type="text/css" href="./css/shadowbox.css" rel="stylesheet" media="all">
@@ -12,13 +12,10 @@
     .swiper-container {
         width: 100%;
         height: 200px;
-        margin: 50px auto;
     }
     .swiper-slide {
         background: #f1f1f1;
         color:#000;
-        text-align: center;
-        line-height: 300px;
     }
 </style>
 <script type="text/javascript" src="./js/shadowbox.js"></script>
@@ -54,28 +51,23 @@ overlayOpacity: 0.8,
 <div class="pic"><img src="img/readmeFBVR.jpg"/></div>
 <p>【紹介】アクションの爽快感と光や影の綺麗な表現を目指して作り上げたゲームです。主に３つの特徴：</p>
 <ul>
-	<li>一閃”、特に”連鎖一閃”の極み
-		<p>大量の敵を直面するなお、一人一人は簡単に倒せない。でもある条件を満たすと”一閃”のタイミングが発生し、一閃することによって一撃で倒せる。そして倒された敵が爆発を起こし、巻き込めた敵も一閃できる状態になって、”連鎖一閃”が成り立つ。結果、連続で大量の敵を一掃することが爽快感を生み出す。</p>
-		<div class="pic"><img src="img/readmeFBVR.jpg"/></div>
-	</li>
-	<li>豊富な光と影の表現、特殊な色彩構成の画面
-		<p>世界は基本白と黒だけの世界で、光と影の強烈な表現で画面を構成する。単純な色けれど逆に強調したい部分がしやすく、一見みても他のゲームの画面と結構違うが感じる。さらに、白と黒そして単一の色をテーマにするシーンがあります。青は湖、緑は草原など、自然の美景を特殊な方法で表示するによって画面の特徴がでる。</p>
-		<div class="pic"><img src="img/readmeFBVR.jpg"/></div>
-	</li>
-	<li>色の混合することで新しい力を手に入れる
-		<p>物語の進行で、光の三原色それぞれをベースにする力が入手する。力は相生相克があり、特性がある。2つ以上の力を同時に使うことで、両方の特性を持ちながら、より強力な力になる。戦闘中で自由的に切り替え、様々な場面が対応して敵を倒していく。</p>
-		<div class="pic"><img src="img/readmeFBVR.jpg"/></div>
-	</li>
+	<li><span class="appeal">一撃連鎖で敵を倒す爽快感</span> 
+    	<p>一撃大量の敵と直面した時、一匹一匹は簡単に倒せない。ある条件を満たすと一撃 で敵を爆発して倒せる。倒された敵の爆発を利用し、新たな別の敵を巻き込ん で一撃連鎖で敵を倒していこう。結果、大量の敵を一掃する爽快感を味わおう。</p></li>
+	<li><span class="appeal">属性の関連や組み合わせの楽しさ</span>  
+		<p>三原色をベースにする属性の力がゲームシステムの中心で、お互い相生相克が ありスキルも使える。さらに、2 つ以上の力を同時に使うことで、両方の特性も 持ち、より強力な力となる。様々な場面を対応し、力を使い分けてギミックを 楽しめる。</p></li>
+    <li><span class="appeal">黒白とそれ以外の色を対照する画面の独特さ</span>
+		<p>基本は黒と白だけの世界で、それ以外の色は属性を意味する。特に光があるも のは力の元と見なされる。色は無色の世界の中でとても目立ち、ゲームとして の意味も一目で分かる。こうして通常時、色が欠けた世界で戦闘に入りあちこ ちで色が咲く画面は独特さを感じられる。</p></li>
 </ul>
 
 <p>【ジャンル】3Dアクション</p>
 <p>【言語、ツール】C#, Unity, Visual Studio</p>
-<p>【チーム構成】プログラマー2名、グラフィカー3名</p>
+<p>【チーム人数】５人</p>
+<p>【担当】リーダー、マインプログラマー、プランナー</p>
 <p>【アピールポイント】
 <ul>
 	<li><span class="appeal">アクションの爽快感：</span>一番力を入れるのが３つの特徴、特に”一撃連鎖”の部分です。キャラクターのアニメーションを作って、動きのエフェクトを加え、敵が打たれた時の反動、爆発の効果音まで、様々な工夫をしました。そして連鎖の部分はだんだんスピードを加速し、テンポを早まって刺激感がてるように作り上げました。</li>
-	<li><span class="appeal">ゲーム性：</span>「色を混ぜることで違う力を生み出す」、これは世界観に合わせて考えた仕様で、その生み出す力もゲーム性に応じて設計されます。それぞれの状況に対して使う色を切り替え、敵を倒していくようにレベル設計しました。</li>
-	<li><span class="appeal">色と光影の表現</span>画面の構成はわざと黒と白にして、色の特殊さを強調するためです。ですが、そしたら、画面の色彩の調整が難しくなります。そこでHDRを使い</li>
+	<li><span class="appeal">色や光と影の表現：</span>画面の構成はわざと黒と白にして、色の特殊さを強調するためです。ですが、そうすると色彩の扱いが難しくなります。そこでHDRを使い、BloomなどのImage Effectで光や色を調整しました。エフェクトもインパクトと分かりやすさのバランスをとりつつ、何回も作り直しました。</li>
+    <li><span class="appeal">ゲーム性による設計：</span>「色を混ぜることで違う力を生み出す」という概念で作り上げた仕様ですが、実際にどの色がどの能力か、これは戦闘の状況により設計しました。近づかない敵がるから遠距離攻撃のスキルを生み出す、罠ようなスキルもあり、活用したら、戦闘の難易度を大きく下がります。</li>
 </ul></p>
 
 <div class="swiper-container">
@@ -83,22 +75,16 @@ overlayOpacity: 0.8,
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-wrapper">
+            <div class="swiper-slide" data-history="PV">
+				<a rel="shadowbox[Movies]" title="PV" href="video/LiD.avi">
+            		<img src="img/LiDVideo.jpg">
+                </a>
+			</div>
             <div class="swiper-slide" data-history="Slide 1">
-			<a href="img/list_h.png" rel="shadowbox" title="タイトル"><img src="img/list_h.png"></a>
+				<a href="img/list_h.png" rel="shadowbox" title="タイトル">
+                	<img src="img/list_h.png">
+                </a>
 			</div>
-            <div class="swiper-slide" data-history="Slide 2">
-			<a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/YrxV762q0Yo"><iframe src="https://www.youtube.com/embed/YrxV762q0Yo"></iframe></a>
-			</div>
-            <div class="swiper-slide" data-history="Slide 3">
-			<a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/YrxV762q0Yo"><img src="./img/icon.png" alt="arc"></a>
-			</div>
-            <div class="swiper-slide" data-history="Slide 4">Slide 4</div>
-            <div class="swiper-slide" data-history="Slide 5">Slide 5</div>
-            <div class="swiper-slide" data-history="Slide 6">Slide 6</div>
-            <div class="swiper-slide" data-history="Slide 7">Slide 7</div>
-            <div class="swiper-slide" data-history="Slide 8">Slide 8</div>
-            <div class="swiper-slide" data-history="Slide 9">Slide 9</div>
-            <div class="swiper-slide" data-history="Slide 10">Slide 10</div>
         </div>
         
     </div>
@@ -106,11 +92,12 @@ overlayOpacity: 0.8,
     <script src="./js/swiper.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            spaceBetween: 50,
-            slidesPerView: 5,
+            spaceBetween: 10,
+            slidesPerView: 3,
             centeredSlides: false,
             slideToClickedSlide: false,
             grabCursor: true,
+			slidesPerView: 'auto',
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
             scrollbar: '.swiper-scrollbar',

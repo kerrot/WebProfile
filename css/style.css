@@ -57,3 +57,7 @@ p,h1, li {
 .pic img {
 	width: 100%;
 }
+
+.swiper-slide a img {
+	height: 100%;
+}
