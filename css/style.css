@@ -30,15 +30,15 @@ p,h1, li {
 	justify-content:center;
 }
 
-#top {
+#top a:hover {
     background: url("../img/top_h.png") no-repeat;
 }
 
-#profile {
+#profile a:hover {
     background: url("../img/profile_h.png") no-repeat;
 }
 
-#list {
+#list a:hover {
     background: url("../img/list_h.png") no-repeat;
 }
 
@@ -60,4 +60,8 @@ p,h1, li {
 
 .swiper-slide a img {
 	height: 100%;
+}
+
+.logoImg {
+	width: 100%
 }

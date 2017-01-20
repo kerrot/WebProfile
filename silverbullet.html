@@ -4,23 +4,11 @@
 <title>Silver Bullet VR</title>
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/Swiperstyle.css">
 <link type="text/css" href="./css/shadowbox.css" rel="stylesheet" media="all">
 <link type="text/css" href="./css/simon.css" rel="stylesheet" media="all">
-<link rel="stylesheet" href="./css/swiper.min.css">
+<link rel="stylesheet" href="Swiper/dist/idangerous.swiper.css">
 <meta name="viewport" content="width=device-width">
-<style>
-    .swiper-container {
-        width: 100%;
-        height: 200px;
-        margin: 50px auto;
-    }
-    .swiper-slide {
-        background: #f1f1f1;
-        color:#000;
-        text-align: center;
-        line-height: 300px;
-    }
-</style>
 <script type="text/javascript" src="./js/shadowbox.js"></script>
 <script type="text/javascript">  
 Shadowbox.init({
@@ -51,8 +39,7 @@ overlayOpacity: 0.8,
 </div>
 </header>
 
-<h1>Silver Bullet VR</h1>
-
+<div><img class="logoImg" src="./img/SILVERBULLET.jpg"></div>
 <p>【紹介】近年話題になった「VR」の装置を使い、仮想空間で「マトリックス」みたいに襲ってくる弾を避けるゲームです。弾の弾道は見えるように作っていて（予測線）、時間差を計算しつつ、弾をすり抜ける緊張感が味わえます。</p>
 
 <p>【ジャンル】VRアクションゲーム</p>
@@ -68,44 +55,64 @@ overlayOpacity: 0.8,
 <p>【実績】このゲームは2016　東京ゲームショウで展示になり、客からの評価も高く、一度遊んた客は友たちを連れてまた来ることもありました。</p>
 
 <div class="swiper-container">
-        <div class="swiper-scrollbar"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" data-history="Slide 1">
-			<a href="img/list_h.png" rel="shadowbox" title="タイトル"><img src="img/list_h.png"></a>
-			</div>
-            <div class="swiper-slide" data-history="Slide 2">
-			<a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/YrxV762q0Yo"><iframe src="https://www.youtube.com/embed/YrxV762q0Yo"></iframe></a>
-			</div>
-            <div class="swiper-slide" data-history="Slide 3">
-			<a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/YrxV762q0Yo"><img src="./img/icon.png" alt="arc"></a>
-			</div>
-            <div class="swiper-slide" data-history="Slide 4">Slide 4</div>
-            <div class="swiper-slide" data-history="Slide 5">Slide 5</div>
-            <div class="swiper-slide" data-history="Slide 6">Slide 6</div>
-            <div class="swiper-slide" data-history="Slide 7">Slide 7</div>
-            <div class="swiper-slide" data-history="Slide 8">Slide 8</div>
-            <div class="swiper-slide" data-history="Slide 9">Slide 9</div>
-            <div class="swiper-slide" data-history="Slide 10">Slide 10</div>
-        </div>
-        
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <!--<a rel="shadowbox[Movies]" href="video/SilverBulletVR.mp4">
+            <img src="img/SilverBulletVRVideo.jpg">
+        </a>-->
+        <a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/9uoJj42g57Q">
+        	<img src="img/SilverBulletVRVideo.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/SilverBulletVRList.jpg" rel="shadowbox">
+            <img src="img/SilverBulletVRList.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/SilverBulletVR01.jpg" rel="shadowbox">
+            <img src="img/SilverBulletVR01.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/SilverBulletVR02.jpg" rel="shadowbox">
+            <img src="img/SilverBulletVR02.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/SilverBulletVR03.jpg" rel="shadowbox">
+            <img src="img/SilverBulletVR03.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/SilverBulletVR04.jpg" rel="shadowbox">
+            <img src="img/SilverBulletVR04.jpg">
+        </a>
+      </div>
     </div>
-	
-    <script src="./js/swiper.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            spaceBetween: 50,
-            slidesPerView: 5,
-            centeredSlides: false,
-            slideToClickedSlide: false,
-            grabCursor: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            scrollbar: '.swiper-scrollbar',
-            history: 'slide',
-        });
-    </script>
+    <div class="pagination"></div>
+    <a class="arrow-left" href="#"></a> 
+  	<a class="arrow-right" href="#"></a>
+  </div>
+<script src="Swiper/js/jquery-1.10.1.min.js"></script>
+<script src="Swiper/dist/idangerous.swiper.min.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    paginationClickable: true,
+    grabCursor: true,
+	spaceBetween: 10,
+    slidesPerView: 'auto'
+  })
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
+  </script>
 </body>
 
 </html>

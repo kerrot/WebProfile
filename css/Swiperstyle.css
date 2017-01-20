@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* CSS Document */
+.swiper-container {
+  width: 100%;
+  height: 250px;
+  color: #fff;
+  text-align: center;
+}
+.swiper-slide {
+  height: 100%;
+  margin: 10px;
+}
+.swiper-container .arrow-left {
+  background: url(../Swiper/img/arrows.png) no-repeat left top;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+}
+.swiper-container .arrow-right {
+  background: url(../Swiper/img/arrows.png) no-repeat left bottom;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+}
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateY(10px) translateX(-50%);
+  transform: translateY(10px) translateX(-50%);
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #222;
+  margin-right: 8px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+.swiper-wrapper {
+	width: 20000px;
+}

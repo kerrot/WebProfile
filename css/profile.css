@@ -37,6 +37,7 @@ p:after {
 }
 
 #self {
+	margin:5px;
 	width: 300px;
 	height: 300px;
 }

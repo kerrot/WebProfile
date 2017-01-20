@@ -24,7 +24,7 @@
 }
 
 .game {
-	margin:10px;
+	margin:auto;
 }
 
 figure {
@@ -33,9 +33,9 @@ figure {
   float: left;
   overflow: hidden;
   margin: 10px 1%;
-  min-width: 400px;
-  max-width: 450px;
-  max-height: 400px;
+  min-width: 350px;
+  max-width: 400px;
+  max-height: 300px;
   width: 100%;
   background: #000000;
   color: #ffffff;

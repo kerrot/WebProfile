@@ -1,23 +1,15 @@
 ﻿<!doctype html>
-<html><head>
+<html>
+<head>
 <meta charset="UTF-8">
 <title>Light in the Dark</title>
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/Swiperstyle.css">
 <link type="text/css" href="./css/shadowbox.css" rel="stylesheet" media="all">
 <link type="text/css" href="./css/simon.css" rel="stylesheet" media="all">
-<link rel="stylesheet" href="./css/swiper.min.css">
+<link rel="stylesheet" href="Swiper/dist/idangerous.swiper.css">
 <meta name="viewport" content="width=device-width">
-<style>
-    .swiper-container {
-        width: 100%;
-        height: 200px;
-    }
-    .swiper-slide {
-        background: #f1f1f1;
-        color:#000;
-    }
-</style>
 <script type="text/javascript" src="./js/shadowbox.js"></script>
 <script type="text/javascript">  
 Shadowbox.init({
@@ -70,40 +62,60 @@ overlayOpacity: 0.8,
     <li><span class="appeal">ゲーム性による設計：</span>「色を混ぜることで違う力を生み出す」という概念で作り上げた仕様ですが、実際にどの色がどの能力か、これは戦闘の状況により設計しました。近づかない敵がるから遠距離攻撃のスキルを生み出す、罠ようなスキルもあり、活用したら、戦闘の難易度を大きく下がります。</li>
 </ul></p>
 
-<div class="swiper-container">
-        <div class="swiper-scrollbar"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" data-history="PV">
-				<a rel="shadowbox[Movies]" title="PV" href="video/LiD.avi">
-            		<img src="img/LiDVideo.jpg">
-                </a>
-			</div>
-            <div class="swiper-slide" data-history="Slide 1">
-				<a href="img/list_h.png" rel="shadowbox" title="タイトル">
-                	<img src="img/list_h.png">
-                </a>
-			</div>
-        </div>
-        
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <!--<a rel="shadowbox[Movies]" href="video/LiD.avi">
+            <img src="img/LiDVideo.jpg">
+        </a>-->
+        <a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/_lHhjJ7fnEs">
+        	<img src="img/LiDVideo.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/LiDList.jpg" rel="shadowbox">
+            <img src="img/LiDList.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/LiD01.jpg" rel="shadowbox">
+            <img src="img/LiD01.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/LiD02.jpg" rel="shadowbox">
+            <img src="img/LiD02.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/LiD03.jpg" rel="shadowbox">
+            <img src="img/LiD03.jpg">
+        </a>
+      </div>
     </div>
-	
-    <script src="./js/swiper.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            spaceBetween: 10,
-            slidesPerView: 3,
-            centeredSlides: false,
-            slideToClickedSlide: false,
-            grabCursor: true,
-			slidesPerView: 'auto',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            scrollbar: '.swiper-scrollbar',
-            history: 'slide',
-        });
-    </script>
+    <div class="pagination"></div>
+    <a class="arrow-left" href="#"></a> 
+  	<a class="arrow-right" href="#"></a>
+  </div>
+<script src="Swiper/js/jquery-1.10.1.min.js"></script>
+<script src="Swiper/dist/idangerous.swiper.min.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    paginationClickable: true,
+    grabCursor: true,
+	spaceBetween: 10,
+    slidesPerView: 'auto'
+  })
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
+  </script>
 </body>
 
 </html>
