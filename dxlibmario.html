@@ -36,16 +36,16 @@
 
 <video src="img/DxlibMario.mp4" autoplay loop></video>
 
-<p>【紹介】Unityを参考して2Dのゲームエンジンを作りました。検証のため、マリオを試しに作りました。実現した機能は：</p>
+<p><span class="cap">【紹介】</span>Unityを参考して2Dのゲームエンジンを作りました。検証のため、マリオを試しに作りました。実現した機能は：</p>
 <p><ul>
 	<li>階層関係のオブジェクトシステム</li>
 	<li>コリジョン(衝突)と物理システム</li>
 	<li>アニメションシステム</li>
 </ul></p>
-<p>【ジャンル】ゲームエンジン</p>
-<p>【言語、ツール】C++, Visual Studio、Dxlib</p>
-<p>【チーム人数】個人</p>
-<p>【アピールポイント】</p>
+<p><span class="cap">【ジャンル】</span>ゲームエンジン</p>
+<p><span class="cap">【言語、ツール】</span>C++, Visual Studio、Dxlib</p>
+<p><span class="cap">【チーム人数】</span>個人</p>
+<p><span class="cap">【アピールポイント】</span></p>
 <ul>
 	<li><span class="appeal">オブジェクト構造：</span>ゲームエンジンではただ絵を画面のどこに描画する機能ではなく、ものをオブジェクト化し、ゲーム世界の座標に置くことで、より直感的でものの位置を決められます。さらに、階層化した（親子関係）オブジェクトは複雑な構造や相対位置を必要する状況にとても役に立ちます。例えば、箱の中にものがあって、箱を移動する時、中のものも一緒に移動します。親子関係だったら、ただ箱を移動するだけでいい、両方とも移動する必要がありません。このエンジンは以上の機能全部実現しました。
 	<div class="pic"><img src="img/parent.jpg"/></div></li>
@@ -56,7 +56,7 @@
 	<li><span class="appeal">アニメーションシステム：</span>UnityのアニメーションではFlashのようなGUI(画像や図形を用いた操作方法)があり、直感的で便利な仕方でアニメーションを作られます。その中心の概念はKey frameというものです。要は、最初と最後の絵を決めて、その間の部分は全部自動演算で生成します。このエンジンはソースコードでこの機能を実現しました。
 	<div class="pic"><img src="img/anime.jpg"/></div></li>
 </ul>
-<p>【使用例】オブジェクト設定：
+<p><span class="cap">【使用例】オブジェクト設定：</span>
 <pre class="brush: cpp;">
 	GameObjectPtr obj = sGameEngine-&gt;CreateGameObject();
 	SpriteRendererPtr spriteRenderer = obj-&gt;AddSpriteRenderer();
@@ -74,7 +74,7 @@
 	obj-&gt;AddSpriteCollider();
 </pre>
 </p>
-<p>【使用例】アニメーション設定：
+<p><span class="cap">【使用例】アニメーション設定：</span>
 <pre class="brush: cpp;">
 	AnimationClipPtr clip = sGameEngine-&gt;CreateAnimationClip("marioMove");
 	AnimationPropertyPtr pro = clip-&gt;CreateProperty(ANIMATION_PROPERTY_SPRITE);

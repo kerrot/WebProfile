@@ -6,7 +6,7 @@ body {
 	background-image:url(../img/bg.jpg);
 	background-repeat:no-repeat;
 	background-color:#000000;
-	background-position:50% 50%;
+	background-position:50% 0%;
 	background-attachment:fixed;
 	width: 1000px;
 	margin: auto;
@@ -64,4 +64,14 @@ p,h1, li {
 
 .logoImg {
 	width: 100%
+}
+
+.appeal {
+	font-size:24px;
+	color:#ff0000;
+}
+
+.cap {
+	font-size:26px;
+	color:#727272;
 }
