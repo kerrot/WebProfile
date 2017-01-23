@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="css/Swiperstyle.css">
 <link type="text/css" href="./css/shadowbox.css" rel="stylesheet" media="all">
 <link type="text/css" href="./css/simon.css" rel="stylesheet" media="all">
-<link rel="stylesheet" href="Swiper/dist/idangerous.swiper.css">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="Swiper/dist/css/swiper.min.css">
 <script type="text/javascript" src="./js/shadowbox.js"></script>
 <script type="text/javascript">  
 Shadowbox.init({
@@ -39,8 +39,9 @@ overlayOpacity: 0.8,
 
 </div>
 </header>
-
-<video src="img/LiDTitle.mp4" autoplay loop></video>
+<video autoplay loop>
+  <source src="video/LiDTitle.mp4" />
+</video>
 <p><span class="cap">【紹介】</span>アクションの爽快感と光や影の綺麗な表現を目指して作り上げたゲームです。主に３つの特徴：</p>
 <ul>
 	<li><span class="appeal">一撃連鎖で敵を倒す爽快感</span> 
@@ -60,9 +61,12 @@ overlayOpacity: 0.8,
 <p><span class="cap">【担当】</span>リーダー、マインプログラマー、プランナー</p>
 <p><span class="cap">【アピールポイント】</span>
 <ul>
-	<li><span class="appeal">アクションの爽快感：</span>一番力を入れるのが３つの特徴、特に”一撃連鎖”の部分です。キャラクターのアニメーションを作って、動きのエフェクトを加え、敵が打たれた時の反動、爆発の効果音まで、様々な工夫をしました。そして連鎖の部分はだんだんスピードを加速し、テンポを早まって刺激感がてるように作り上げました。</li>
-	<li><span class="appeal">色や光と影の表現：</span>画面の構成はわざと黒と白にして、色の特殊さを強調するためです。ですが、そうすると色彩の扱いが難しくなります。そこでHDRを使い、BloomなどのImage Effectで光や色を調整しました。エフェクトもインパクトと分かりやすさのバランスをとりつつ、何回も作り直しました。</li>
-    <li><span class="appeal">ゲーム性による設計：</span>「色を混ぜることで違う力を生み出す」という概念で作り上げた仕様ですが、実際にどの色がどの能力か、これは戦闘の状況により設計しました。近づかない敵がるから遠距離攻撃のスキルを生み出す、罠ようなスキルもあり、活用したら、戦闘の難易度を大きく下がります。</li>
+	<li><span class="appeal">アクションの爽快感：</span>
+    <p>一番力を入れるのが３つの特徴、特に”一撃連鎖”の部分です。キャラクターのアニメーションを作って、動きのエフェクトを加え、敵が打たれた時の反動、爆発の効果音まで、様々な工夫をしました。そして連鎖の部分はだんだんスピードを加速し、テンポを早まって刺激感がてるように作り上げました。</p></li>
+	<li><span class="appeal">色や光と影の表現：</span>
+    <p>画面の構成はわざと黒と白にして、色の特殊さを強調するためです。ですが、そうすると色彩の扱いが難しくなります。そこでHDRを使い、BloomなどのImage Effectで光や色を調整しました。エフェクトもインパクトと分かりやすさのバランスをとりつつ、何回も作り直しました。</p></li>
+    <li><span class="appeal">ゲーム性による設計：</span>
+    <p>「色を混ぜることで違う力を生み出す」という概念で作り上げた仕様ですが、実際にどの色がどの能力か、これは戦闘の状況により設計しました。近づかない敵がるから遠距離攻撃のスキルを生み出す、罠ようなスキルもあり、活用したら、戦闘の難易度を大きく下がります。</p></li>
 </ul></p>
 
   <div class="swiper-container">
@@ -96,29 +100,26 @@ overlayOpacity: 0.8,
         </a>
       </div>
     </div>
-    <div class="pagination"></div>
-    <a class="arrow-left" href="#"></a> 
-  	<a class="arrow-right" href="#"></a>
-  </div>
-<script src="Swiper/js/jquery-1.10.1.min.js"></script>
-<script src="Swiper/dist/idangerous.swiper.min.js"></script>
-<script>
-  var mySwiper = new Swiper('.swiper-container',{
-    pagination: '.pagination',
-    paginationClickable: true,
-    grabCursor: true,
-	spaceBetween: 10,
-    slidesPerView: 'auto'
-  })
-  $('.arrow-left').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipePrev()
-  })
-  $('.arrow-right').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipeNext()
-  })
-  </script>
+    <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="Swiper/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2.1,
+        paginationClickable: true,
+        spaceBetween: 30
+    });
+    </script>
 </body>
 
 </html>

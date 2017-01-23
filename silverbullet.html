@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="css/Swiperstyle.css">
 <link type="text/css" href="./css/shadowbox.css" rel="stylesheet" media="all">
 <link type="text/css" href="./css/simon.css" rel="stylesheet" media="all">
-<link rel="stylesheet" href="Swiper/dist/idangerous.swiper.css">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="Swiper/dist/css/swiper.min.css">
 <script type="text/javascript" src="./js/shadowbox.js"></script>
 <script type="text/javascript">  
 Shadowbox.init({
@@ -48,9 +48,12 @@ overlayOpacity: 0.8,
 <p><span class="cap">【担当】</span>プログラミング全般</p>
 <p><span class="cap">【アピールポイント】</span>
 <ul>
-	<li><span class="appeal">VR酔いの配慮：</span>VRゲームでは今までのゲームと違い、3D世界に入り込むような体感があり、ゲームの操作方法も新しく考える必要があります。そしてもっとも気になる「VR酔い」の問題はとても重要です。いろいろを考えて、試行錯誤をし、最後に頭の動きだけで弾を避けるようにしました。UIと説明を補助にして、初めてもすぐに上手に遊べます。「VR酔い」は全くなく、いい体験に出来上がりました。</li>
-	<li><span class="appeal">UIの分かりやすさ：</span>予測線（弾の弾道）はプレイヤーにこのゲームを理解するための重要な点で、緊張感の元でもあります。ですので、その表示方法を出来る限り分かり安く、これを見って弾に当たるかどうかを分かれるように作りました。</li>
-	<li><span class="appeal">刺激な画面：</span>刺激感を得るために、弾の速度、時間差結構重要になり、プレイヤーは動くため、弾道はプレイヤーの反応を予測必要もあります。そして予測線を利用して、画面のインパクトもなり、ゲームの面白さが生まれます。</li>
+	<li><span class="appeal">VR酔いの配慮：</span>
+    <p>VRゲームでは今までのゲームと違い、3D世界に入り込むような体感があり、ゲームの操作方法も新しく考える必要があります。そしてもっとも気になる「VR酔い」の問題はとても重要です。いろいろを考えて、試行錯誤をし、最後に頭の動きだけで弾を避けるようにしました。UIと説明を補助にして、初めてもすぐに上手に遊べます。「VR酔い」は全くなく、いい体験に出来上がりました。</p></li>
+	<li><span class="appeal">UIの分かりやすさ：</span>
+    <p>予測線（弾の弾道）はプレイヤーにこのゲームを理解するための重要な点で、緊張感の元でもあります。ですので、その表示方法を出来る限り分かり安く、これを見って弾に当たるかどうかを分かれるように作りました。</p></li>
+	<li><span class="appeal">刺激な画面：</span>
+    <p>刺激感を得るために、弾の速度、時間差結構重要になり、プレイヤーは動くため、弾道はプレイヤーの反応を予測必要もあります。そして予測線を利用して、画面のインパクトもなり、ゲームの面白さが生まれます。</p></li>
 </ul></p>
 <p><span class="cap">【実績】</span>このゲームは2016　東京ゲームショウで展示になり、客からの評価も高く、一度遊んた客は友たちを連れてまた来ることもありました。</p>
 
@@ -90,29 +93,26 @@ overlayOpacity: 0.8,
         </a>
       </div>
     </div>
-    <div class="pagination"></div>
-    <a class="arrow-left" href="#"></a> 
-  	<a class="arrow-right" href="#"></a>
-  </div>
-<script src="Swiper/js/jquery-1.10.1.min.js"></script>
-<script src="Swiper/dist/idangerous.swiper.min.js"></script>
-<script>
-  var mySwiper = new Swiper('.swiper-container',{
-    pagination: '.pagination',
-    paginationClickable: true,
-    grabCursor: true,
-	spaceBetween: 10,
-    slidesPerView: 'auto'
-  })
-  $('.arrow-left').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipePrev()
-  })
-  $('.arrow-right').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipeNext()
-  })
-  </script>
+    <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="Swiper/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2.1,
+        paginationClickable: true,
+        spaceBetween: 30
+    });
+    </script>
 </body>
 
 </html>

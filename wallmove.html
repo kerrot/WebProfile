@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="css/Swiperstyle.css">
 <link type="text/css" href="./css/shadowbox.css" rel="stylesheet" media="all">
 <link type="text/css" href="./css/simon.css" rel="stylesheet" media="all">
-<link rel="stylesheet" href="Swiper/dist/idangerous.swiper.css">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="Swiper/dist/css/swiper.min.css">
 <script type="text/javascript" src="./js/shadowbox.js"></script>
 <script type="text/javascript">  
 Shadowbox.init({
@@ -49,21 +49,21 @@ overlayOpacity: 0.8,
 <p><span class="cap">【担当】</span>プログラマー（マインシステム）</p>
 <p><span class="cap">【アピールポイント】</span>
 <ul>
-	<li><span class="appeal">遠近感のある画面：</span>背景を遠近感が見せるように設計しました。キャラクターが進むと前のオブジェクトが早く、後ろのものが遅く、列車上見える景色みたいに自然な感じを作り上げました。下の図は実際Unityで編集する様子です。</li>
+	<li><span class="appeal">遠近感のある画面：</span>
+    <p>背景を遠近感が見せるように設計しました。キャラクターが進むと前のオブジェクトが早く、後ろのものが遅く、列車上見える景色みたいに自然な感じを作り上げました。下の図は実際Unityで編集する様子です。</p></li>
     <div><img class="logoImg" src="./img/3Dscene.jpg"></div>
-	<li><span class="appeal">3D的な動き：</span>キャラクターの動きをホントに回転しているのように見えるため、全ての方向に向かってアニメーションを作りました。体が回転するときも斜めになって、左右手を分けて動かしていて、2Dながら3Dっぽく見えます。</li>
-	<li><span class="appeal">自由に組み立てられる仕組み：</span>プログラミングの面では、機能を分けて組み立てることができるようになっています。例えば、”敵に当たると死ぬ”、”ワイヤーに打たれると爆発する”この二つの仕様を、”敵に当たる”、”死ぬ”、”ワイヤーに打たれる”、”爆発する”４つの機能に分けって、自由に組み立てることによって、”敵に当たると爆発する”、”ワイヤーに打たれると死ぬ”みたいな機能もできます。こうしてプランナーは簡単に様々なことができて、作業の進み状況も大幅に早くなっています。</li>
+	<li><span class="appeal">3D的な動き：</span>
+    <p>キャラクターの動きをホントに回転しているのように見えるため、全ての方向に向かってアニメーションを作りました。体が回転するときも斜めになって、左右手を分けて動かしていて、2Dながら3Dっぽく見えます。</p></li>
+	<li><span class="appeal">自由に組み立てられる仕組み：</span>
+    <p>プログラミングの面では、機能を分けて組み立てることができるようになっています。例えば、”敵に当たると死ぬ”、”ワイヤーに打たれると爆発する”この二つの仕様を、”敵に当たる”、”死ぬ”、”ワイヤーに打たれる”、”爆発する”４つの機能に分けって、自由に組み立てることによって、”敵に当たると爆発する”、”ワイヤーに打たれると死ぬ”みたいな機能もできます。こうしてプランナーは簡単に様々なことができて、作業の進み状況も大幅に早くなっています。</p></li>
 </ul></p>
 
 <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <a rel="shadowbox[Movies]" href="video/WallMove.mp4">
-            <img src="img/WallMoveVedio.jpg">
-        </a>
-        <!--<a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/_lHhjJ7fnEs">
+        <a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/ooUdO6cUPZw">
         	<img src="img/WallMoveVedio.jpg">
-        </a>-->
+        </a>
       </div>
       <div class="swiper-slide">
         <a href="img/WallMove2.png" rel="shadowbox">
@@ -76,7 +76,7 @@ overlayOpacity: 0.8,
         </a>
       </div>
       <div class="swiper-slide">
-        <a href="img/WallMove4.png" rel="shadowbox">
+        <a href="img/WallMove4.jpg" rel="shadowbox">
             <img src="img/WallMove4.jpg">
         </a>
       </div>
@@ -85,30 +85,27 @@ overlayOpacity: 0.8,
             <img src="img/WallMove3.jpg">
         </a>
       </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
     </div>
-    <div class="pagination"></div>
-    <a class="arrow-left" href="#"></a> 
-  	<a class="arrow-right" href="#"></a>
-  </div>
-<script src="Swiper/js/jquery-1.10.1.min.js"></script>
-<script src="Swiper/dist/idangerous.swiper.min.js"></script>
-<script>
-  var mySwiper = new Swiper('.swiper-container',{
-    pagination: '.pagination',
-    paginationClickable: true,
-    grabCursor: true,
-	spaceBetween: 10,
-    slidesPerView: 'auto'
-  })
-  $('.arrow-left').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipePrev()
-  })
-  $('.arrow-right').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipeNext()
-  })
-  </script>
+
+    <!-- Swiper JS -->
+    <script src="Swiper/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2.1,
+        paginationClickable: true,
+        spaceBetween: 30
+    });
+    </script>
 </body>
 
 </html>
