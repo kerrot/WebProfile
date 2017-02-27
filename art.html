@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<title>Wall Move</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/Swiperstyle.css">
+<link type="text/css" href="./css/shadowbox.css" rel="stylesheet" media="all">
+<link type="text/css" href="./css/simon.css" rel="stylesheet" media="all">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="Swiper/dist/css/swiper.min.css">
+<script type="text/javascript" src="./js/shadowbox.js"></script>
+<script type="text/javascript">  
+Shadowbox.init({
+overlayOpacity: 0.8,
+  slideshowDelay: 5,
+  continuous: true,
+  language: "en",
+  animateFade: true,
+});
+</script>
+</head>
+
+<body>
+
+<header>
+<div id="menu">
+
+<div id="top">
+<a href="index.html"><img src="img/top_n.png"/></a>
+</div>
+<div id="profile">
+<a href="profile.html"><img src="img/profile_n.png"/></a>
+</div>
+<div id="list">
+<a href="list.html"><img src="img/list_n.png"/></a>
+</div>
+
+</div>
+</header>
+
+<p><span class="cap">【紹介】</span>ゲームは一種のアートであると思います。ただプログラマーと自分を制限したくなく、ゲーム開発者としてゲームに関する美術センスを身につけると目指しています。学校の授業にもダブルダブルメジャーでCGを勉強しています。他にも様々なデザインスキルを学んでいます。今できるソフトは以下：</p>
+<ul>
+	<li>Photoshop</li>
+	<li>Illustrator</li>
+	<li>Maya</li>
+	<li>Mudbox</li>
+	<li>Aftereffect</li>
+</ul>
+<p>そして作品は以下：</p>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+	  <div class="swiper-slide">
+        <a href="img/Art1.jpg" rel="shadowbox" title="Photoshop作品">
+            <img src="img/Art1.jpg">
+        </a>
+      </div>
+	  <div class="swiper-slide">
+        <a href="img/Art2.jpg" rel="shadowbox" title="Photoshop作品">
+            <img src="img/Art2.jpg">
+        </a>
+      </div>
+	  <div class="swiper-slide">
+        <a href="img/Art6.jpg" rel="shadowbox" title="Photoshop作品">
+            <img src="img/Art6.jpg">
+        </a>
+      </div>
+	  <div class="swiper-slide">
+        <a href="img/Art3.jpg" rel="shadowbox" title="Illustrator作品">
+            <img src="img/Art3.jpg">
+        </a>
+      </div>
+	  <div class="swiper-slide">
+        <a href="img/Art4.jpg" rel="shadowbox" title="Maya作品">
+            <img src="img/Art4.jpg">
+        </a>
+      </div>
+	  <div class="swiper-slide">
+        <a href="img/Art5.jpg" rel="shadowbox" title="Mudbox作品">
+            <img src="img/Art5.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/_lHhjJ7fnEs" title="Aftereffect作品">
+        	<img src="img/LiDVideo.jpg">
+        </a>
+      </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="Swiper/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2.1,
+        paginationClickable: true,
+        spaceBetween: 30
+    });
+    </script>
+</body>
+
+</html>
