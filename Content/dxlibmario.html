@@ -1,0 +1,107 @@
+﻿<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<title>Dxlib Mario</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCore.css" />
+<link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shThemeDefault.css" />
+<script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js"></script>
+<script type="text/javascript">
+   SyntaxHighlighter.config.clipboardSwf = 'syntaxhighlighter/scripts/clipboard.swf';
+   SyntaxHighlighter.all();
+</script>
+</head>
+
+<body>
+
+<header>
+<div id="menu">
+
+<div id="top">
+<a href="../index.html"><img src="img/top_n.png"/></a>
+</div>
+<div id="profile">
+<a href="profile.html"><img src="img/profile_n.png"/></a>
+</div>
+<div id="list">
+<a href="list.html"><img src="img/list_n.png"/></a>
+</div>
+
+</div>
+</header>
+
+<h1>Dxlib Mario</h1>
+<video autoplay loop>
+  <source src="video/DxlibMario.mp4" />
+</video>
+
+<p><span class="cap">【紹介】</span>Unityを参考して2Dのゲームエンジンを作りました。検証のため、マリオを試しに作りました。実現した機能は：</p>
+<p><ul>
+	<li>階層関係のオブジェクトシステム</li>
+	<li>コリジョン(衝突)と物理システム</li>
+	<li>アニメションシステム</li>
+</ul></p>
+<p><span class="cap">【ジャンル】</span>ゲームエンジン</p>
+<p><span class="cap">【言語、ツール】</span>C++, Visual Studio、Dxlib</p>
+<p><span class="cap">【チーム人数】</span>個人</p>
+<p><span class="cap">【制作期間】</span>2016/08～2016/10</p>
+<p><span class="cap">【アピールポイント】</span></p>
+<ul>
+	<li><span class="appeal">オブジェクト構造：</span>
+    <p>ゲームエンジンではただ絵を画面のどこに描画する機能ではなく、ものをオブジェクト化し、ゲーム世界の座標に置くことで、より直感的でものの位置を決められます。さらに、階層化した（親子関係）オブジェクトは複雑な構造や相対位置を必要する状況にとても役に立ちます。例えば、箱の中にものがあって、箱を移動する時、中のものも一緒に移動します。親子関係だったら、ただ箱を移動するだけでいい、両方とも移動する必要がありません。このエンジンは以上の機能全部実現しました。</p>
+	<div class="pic"><img src="img/parent.jpg"/></div></li>
+	<li><span class="appeal">物理と衝突判定の仕組み：</span>
+    <p>Unityではただオブジェクトに物理システム（RigidBody）と衝突判定（Collider）を付けるだけで物理の運動を行えます。システムを設計し、同じ形で実現しました。システムを構造は以下:</p>
+	<div class="pic"><img src="img/flow.jpg"/></div>
+	<p>最も困難の部分は運動状態の衝突判定です。一般的にオブジェクトを移動するには、大量な小さい瞬間移動で実現しました。もし一回の移動量が大きい場合、ものを貫通する可能性があります。よって一回の量を判断し、大きいの場合は半分の量で二回移動にします。そして移動する際には、X、Y軸に分けて、衝突になる前の位置に止まる。</p>
+	<div class="pic"><img src="img/physics.jpg"/></div></li>
+	<li><span class="appeal">アニメーションシステム：</span>
+    <p>UnityのアニメーションではFlashのようなGUI(画像や図形を用いた操作方法)があり、直感的で便利な仕方でアニメーションを作られます。その中心の概念はKey frameというものです。要は、最初と最後の絵を決めて、その間の部分は全部自動演算で生成します。このエンジンはソースコードでこの機能を実現しました。</p>
+	<div class="pic"><img src="img/anime.jpg"/></div></li>
+</ul>
+<p><span class="cap">【使用例】オブジェクト設定：</span>
+<pre class="brush: cpp;">
+	GameObjectPtr obj = sGameEngine-&gt;CreateGameObject();
+	SpriteRendererPtr spriteRenderer = obj-&gt;AddSpriteRenderer();
+	spriteRenderer-&gt;SetLayer(-2);
+	SpritePtr sprite = sGameEngine-&gt;LoadSprite("Resources/test1.bmp");
+	spriteRenderer-&gt;SetSprite(sprite);
+
+	//mario
+	obj = sGameEngine-&gt;CreateGameObject();
+	obj-&gt;AddBehavior(MarioControlPtr (new MarioControl()));
+	obj-&gt;SetGlobalPosition(Vector(70, 170));
+	RigidBody2DPtr rigid = obj-&gt;AddRigidBody2D();
+	rigid-&gt;SetGravity(Vector(0, 1));
+	rigid-&gt;SetDrag(0.5);
+	obj-&gt;AddSpriteCollider();
+</pre>
+</p>
+<p><span class="cap">【使用例】アニメーション設定：</span>
+<pre class="brush: cpp;">
+	AnimationClipPtr clip = sGameEngine-&gt;CreateAnimationClip("marioMove");
+	AnimationPropertyPtr pro = clip-&gt;CreateProperty(ANIMATION_PROPERTY_SPRITE);
+
+	SpritePtr sprite = sGameEngine-&gt;LoadSprite("Resources/player0.png");
+
+	AnimationDataSprite::SetSpriteAnimation(pro-&gt;AddPeroidKeys(500, 4), sprite, 16, 16, 16, 0, 8, 16);
+
+	AnimatorPtr animator = _gameobject-&gt;AddAnimator();
+	AnimationStatePtr moveState = animator-&gt;AddState("Move");
+	moveState-&gt;SetClip(clip);
+
+	clip = sGameEngine-&gt;CreateAnimationClip("marioJump");
+	pro = clip-&gt;CreateProperty(ANIMATION_PROPERTY_SPRITE);
+	AnimationDataSpritePtr p = std::dynamic_pointer_cast&lt;AnimationDataSprite&gt;(pro-&gt;AddKey(0));
+	p-&gt;SetSprite(sprite);
+	p-&gt;SetDrawRect(Rect(80, 96, 0, 16));
+	p-&gt;SetPivot(8, 16);
+	AnimationStatePtr jumpState = animator-&gt;AddState("Jump");
+	jumpState-&gt;SetClip(clip);
+</pre>
+</p>
+</body>
+
+</html>

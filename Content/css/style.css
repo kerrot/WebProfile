@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
+body {
+	background-image:url(../img/bg.jpg);
+	background-repeat:no-repeat;
+	background-color:#000000;
+	background-position:50% 0%;
+	background-attachment:fixed;
+	width: 1000px;
+	margin: auto;
+}
+
+p,h1, li {
+	color:#FFFFFF;
+	text-shadow:
+		0px -1px #000,
+		1px 0px #000,
+		0px 1px #000,
+		-1px 1px #000,
+		4px 4px hsla(0,0%,0%,0.20);
+}
+
+#menu {
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	display:flex;
+	justify-content:center;
+}
+
+#top a:hover {
+    background: url("../img/top_h.png") no-repeat;
+}
+
+#profile a:hover {
+    background: url("../img/profile_h.png") no-repeat;
+}
+
+#list a:hover {
+    background: url("../img/list_h.png") no-repeat;
+}
+
+#menu a {
+    display: inline-block;
+}
+
+#menu a:hover {
+	background-color: transparent;
+}
+
+#menu a:hover img {
+    visibility: hidden;
+}
+
+.pic img {
+	width: 100%;
+}
+
+.logoImg {
+	width: 100%
+}
+
+.appeal {
+  font-size: 22px;
+  -webkit-animation:animation-text 2s infinite linear;
+   animation:animation-text 2s infinite linear;
+}
+
+@keyframes animation-text {
+     
+  0% {
+    color:#FFFFFF;
+  }
+
+  50% {
+    color:#777777;
+  }
+
+  100% {
+    color:#FFFFFF;
+  }
+}
+
+.cap {
+	color: #fff;
+font-size: 26px;
+font-weight: bold;
+font-family: Helvetica;
+text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}

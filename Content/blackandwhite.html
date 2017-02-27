@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Light in the Dark</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/Swiperstyle.css">
+<link type="text/css" href="./css/shadowbox.css" rel="stylesheet" media="all">
+<link type="text/css" href="./css/simon.css" rel="stylesheet" media="all">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="Swiper/dist/css/swiper.min.css">
+<script type="text/javascript" src="./js/shadowbox.js"></script>
+<script type="text/javascript">  
+Shadowbox.init({
+overlayOpacity: 0.8,
+  slideshowDelay: 5,
+  continuous: true,
+  language: "en",
+  animateFade: true,
+});
+</script>
+</head>
+
+<body>
+
+<header>
+<div id="menu">
+
+<div id="top">
+<a href="../index.html"><img src="img/top_n.png"/></a>
+</div>
+<div id="profile">
+<a href="profile.html"><img src="img/profile_n.png"/></a>
+</div>
+<div id="list">
+<a href="list.html"><img src="img/list_n.png"/></a>
+</div>
+
+</div>
+</header>
+<video autoplay loop>
+  <source src="video/LiDTitle.mp4" />
+</video>
+<p><span class="cap">【紹介】</span>アクションの爽快感と光や影の綺麗な表現を目指して作り上げたゲームです。主に３つの特徴：</p>
+<ul>
+	<li><span class="appeal">一撃連鎖で敵を倒す爽快感</span> 
+    	<p>一撃大量の敵と直面した時、一匹一匹は簡単に倒せない。ある条件を満たすと一撃 で敵を爆発して倒せる。倒された敵の爆発を利用し、新たな別の敵を巻き込ん で一撃連鎖で敵を倒していこう。結果、大量の敵を一掃する爽快感を味わおう。</p>
+    <div><img class="logoImg" src="./img/LiDreadme1.jpg"></div></li>
+	<li><span class="appeal">属性の関連や組み合わせの楽しさ</span>  
+		<p>三原色をベースにする属性の力がゲームシステムの中心で、お互い相生相克が ありスキルも使える。さらに、2 つ以上の力を同時に使うことで、両方の特性も 持ち、より強力な力となる。様々な場面を対応し、力を使い分けてギミックを 楽しめる。</p>
+    <div><img class="logoImg" src="./img/LiDreadme2.jpg"></div></li>
+    <li><span class="appeal">黒白とそれ以外の色を対照する画面の独特さ</span>
+		<p>基本は黒と白だけの世界で、それ以外の色は属性を意味する。特に光があるも のは力の元と見なされる。色は無色の世界の中でとても目立ち、ゲームとして の意味も一目で分かる。こうして通常時、色が欠けた世界で戦闘に入りあちこ ちで色が咲く画面は独特さを感じられる。</p>
+    <div><img class="logoImg" src="./img/LiDreadme3.jpg"></div></li>
+</ul>
+
+<p><span class="cap">【ジャンル】</span>3Dアクション</p>
+<p><span class="cap">【言語、ツール】</span>C#, Unity, Visual Studio</p>
+<p><span class="cap">【チーム人数】</span>５人</p>
+<p><span class="cap">【担当】</span>リーダー、マインプログラマー、プランナー</p>
+<p><span class="cap">【制作期間】</span>2016/04～</p>
+<p><span class="cap">【アピールポイント】</span>
+<ul>
+	<li><span class="appeal">アクションの爽快感：</span>
+    <p>一番力を入れるのが３つの特徴、特に”一撃連鎖”の部分です。キャラクターのアニメーションを作って、動きのエフェクトを加え、敵が打たれた時の反動、爆発の効果音まで、様々な工夫をしました。そして連鎖の部分はだんだんスピードを加速し、テンポを早まって刺激感がてるように作り上げました。</p></li>
+	<li><span class="appeal">色や光と影の表現：</span>
+    <p>画面の構成はわざと黒と白にして、色の特殊さを強調するためです。ですが、そうすると色彩の扱いが難しくなります。そこでHDRを使い、BloomなどのImage Effectで光や色を調整しました。エフェクトもインパクトと分かりやすさのバランスをとりつつ、何回も作り直しました。</p></li>
+    <li><span class="appeal">ゲーム性による設計：</span>
+    <p>「色を混ぜることで違う力を生み出す」という概念で作り上げた仕様ですが、実際にどの色がどの能力か、これは戦闘の状況により設計しました。近づかない敵がるから遠距離攻撃のスキルを生み出す、罠ようなスキルもあり、活用したら、戦闘の難易度を大きく下がります。</p></li>
+</ul></p>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <!--<a rel="shadowbox[Movies]" href="video/LiD.avi">
+            <img src="img/LiDVideo.jpg">
+        </a>-->
+        <a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/_lHhjJ7fnEs">
+        	<img src="img/LiDVideo.jpg">
+        </a>
+      </div>
+	  <div class="swiper-slide">
+        <a href="img/Art2.jpg" rel="shadowbox">
+            <img src="img/Art2.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/LiDList.jpg" rel="shadowbox">
+            <img src="img/LiDList.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/LiD01.jpg" rel="shadowbox">
+            <img src="img/LiD01.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/LiD02.jpg" rel="shadowbox">
+            <img src="img/LiD02.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/LiD03.jpg" rel="shadowbox">
+            <img src="img/LiD03.jpg">
+        </a>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="Swiper/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2.1,
+        paginationClickable: true,
+        spaceBetween: 30
+    });
+    </script>
+</body>
+
+</html>

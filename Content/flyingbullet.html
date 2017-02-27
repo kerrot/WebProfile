@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<title>Flying Bullet VR</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/Swiperstyle.css">
+<link type="text/css" href="./css/shadowbox.css" rel="stylesheet" media="all">
+<link type="text/css" href="./css/simon.css" rel="stylesheet" media="all">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="Swiper/dist/css/swiper.min.css">
+<script type="text/javascript" src="./js/shadowbox.js"></script>
+<script type="text/javascript">  
+Shadowbox.init({
+overlayOpacity: 0.8,
+  slideshowDelay: 5,
+  continuous: true,
+  language: "en",
+  animateFade: true,
+});
+</script>
+</head>
+
+<body>
+
+<header>
+<div id="menu">
+
+<div id="top">
+<a href="../index.html"><img src="img/top_n.png"/></a>
+</div>
+<div id="profile">
+<a href="profile.html"><img src="img/profile_n.png"/></a>
+</div>
+<div id="list">
+<a href="list.html"><img src="img/list_n.png"/></a>
+</div>
+
+</div>
+</header>
+
+<h1>Flying Bullet VR</h1>
+
+<p><span class="cap">【紹介】</span>VR世界では、自分が本当に世界の中にいるという「没入感」が圧倒的で、現実で体験できない視点も味わえます。このゲームは弾の視点で飛んでいながら、周りの世界を楽しめます。壁に跳ね返るなどの要素をいれ、最後に標的を狙う試作ゲームです。</p>
+
+<p><span class="cap">【ジャンル】</span>VRシミュレーションゲーム</p>
+<p><span class="cap">【言語、ツール】</span>C#, Unity, Visual Studio、Oculus Rift</p>
+<p><span class="cap">【チーム人数】</span>個人</p>
+<p><span class="cap">【制作期間】</span>2016/09～2016/10</p>
+<p><span class="cap">【アピールポイント】</span>
+	<div id="alg">
+	<div id="algText"><ul>
+	<li><span class="appeal">跳ね返りの事前演算：</span>
+    <p>跳ね返る部分はUnityの物理システムを直接使ったら操作しにくいのて、自分でその物理演算を行いました。最初は発射の方向を調整した後、弾の弾道を変えないですが、今時点の弾道を見て、次の弾道を調整できます。その仮想な弾も表示しました。それを実現するには、発射時点から、跳ね返りを経て、最後の方向まで全部事前演算して線で表示しました。</p></li>
+	<li><span class="appeal">予想弾道の表示：</span>
+    <p>次の弾道を調整するには、最初の発射弾道を変えれば簡単ですが、跳ね返すのせいで、ちょっとでだけの調整で結果的に大きい差があります。理想的では跳ね返るにも関わらず、調整した数字と同量の位置差が目標です。すなわち、最終弾の位置が分かって、そして逆算して発射の弾道を得ることになります。</p></li></ul>
+	</div>
+	<div>
+		<a href="img/readmeFBVR.jpg" rel="shadowbox" title="計算方法"><img src="img/fly.jpg"></a>
+	</div>
+</div>
+	
+
+</p>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <!--<a rel="shadowbox[Movies]" href="video/FlyingBulletVR.mp4">
+            <img src="img/FlyingBulletVR.jpg">
+        </a>-->
+        <a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/fDEhtMp9AvI">
+        	<img src="img/FlyingBulletVR.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/FlyList.jpg" rel="shadowbox">
+            <img src="img/FlyList.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/FlyingBulletVR01.jpg" rel="shadowbox">
+            <img src="img/FlyingBulletVR01.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="img/FlyingBulletVR02.jpg" rel="shadowbox">
+            <img src="img/FlyingBulletVR02.jpg">
+        </a>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="Swiper/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2.1,
+        paginationClickable: true,
+        spaceBetween: 30
+    });
+    </script>
+</body>
+
+</html>
