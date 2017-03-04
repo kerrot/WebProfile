@@ -1,7 +1,8 @@
 <!doctype html>
-<html><head>
+<html>
+<head>
 <meta charset="UTF-8">
-<title>Super War</title>
+<title>SuperWar</title>
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Swiperstyle.css">
@@ -39,35 +40,31 @@ overlayOpacity: 0.8,
 </div>
 </header>
 
-<p><span class="cap">【紹介】</span></p>
+<h1>SuperWar</h1>
+<div><img class="logoImg" src="./img/SuperWar1.jpg"></div>
+
+<p><span class="cap">【紹介】</span>「スーパーロボット大戦」、「サクラ大戦」、「大番長」のシステムを合わせて構想したゲームです。マップ上小さいと大きいブロックに分かれて、毎ターンが終わる際大きいブロックの中の敵と味方双方が強制的に戦闘に入り、領地の攻守を繰り返すゲームです。戦闘は近、中、遠攻撃に分かれて、どうやって有利な戦略を選択するのが重要です。</p>
+
 <p><span class="cap">【ジャンル】</span>2D+3Dシミュレーションロールプレイング</p>
 <p><span class="cap">【言語、ツール】</span>C++, OpenGL, OpenAL, Visual Studio</p>
 <p><span class="cap">【チーム人数】</span>3人</p>
-<p><span class="cap">【担当】</span>リーダー、プログラマー（メインシステム）</p>
+<p><span class="cap">【担当】</span>リーダー、企画、プログラミング（システムインフラ）</p>
+<p><span class="cap">【制作期間】</span>2006/1（約三週間）</p>
+<p><span class="cap">【ソースコード】</span><a target="_blank" href="https://github.com/kerrot/SuperWar">https://github.com/kerrot/SuperWar</a></p>
 <p><span class="cap">【アピールポイント】</span>
 <ul>
-	<li><span class="appeal">遠近感のある画面：</span>
-    <p>背景を遠近感が見せるように設計しました。キャラクターが進むと前のオブジェクトが早く、後ろのものが遅く、列車上見える景色みたいに自然な感じを作り上げました。下の図は実際Unityで編集する様子です。</p></li>
-    <div><img class="logoImg" src="./img/3Dscene.jpg"></div>
-	<li><span class="appeal">ボスの巡回システム：</span>
-    <p>ボズは列車のような動きで巡回しでいますので、ルートが必要です。そこでUnityのEditorで直接に編集できるシステムを設計しました。ゲームを起動しなくでも編集できます。ボスの体は基本ルートの上に走っていて、体の向きだけ追尾させました。カクカクもしない滑らかな動きを意識しました。</p></li>
-	<video class="logoImg" autoplay loop>
-  		<source src="video/BossRoot.mp4" />
-	</video>
-	<li><span class="appeal">自由に組み立てられる仕組み：</span>
-    <p>プログラミングの面では、機能を分けて組み立てることができるようになっています。例えば、”敵に当たると死ぬ”、”ワイヤーに打たれると爆発する”この二つの仕様を、”敵に当たる”、”死ぬ”、”ワイヤーに打たれる”、”爆発する”４つの機能に分けて、自由に組み立てることによって、”敵に当たると爆発する”、”ワイヤーに打たれると死ぬ”みたいな機能もできます。こうしてプランナーは簡単に様々なことができて、作業の進み状況も大幅に早くなっています。</p></li>
+	<li><span class="appeal">システムの設計：</span>
+    <p>戦闘システムは近、中、遠攻撃を分けています。でも反撃の設定があり、つまり近攻撃のチャラが遠攻撃のキャラに攻撃されても、相手の前に移動して反撃します。でもそれはマップ移動と矛盾します。これを解決ために大きいブロックを考えました。つまり「陣地」の概念です。同じ陣地の中にいるキャラは戦闘に入ります。</p></li>
+    <li><span class="appeal">地形の影響：</span>
+    <p>地形はキャラのパラメーターや移動範囲を影響します。そこで戦略を生み出し、陣地の重要性をもう一度強化します。</p></li>
+    <li><span class="appeal">AIの実現</span>
+    <p>AIを挑戦して作り、難易度まで選べます。ゲームの要素をすべて含めて、いくつの条件の判断で最もいい位置に移動し、戦闘の時も弱い敵を選んで集中攻撃します。場合によって大技も使えます。</p></li>
 </ul></p>
-
 <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/ULejTftgJe8">
         	<img src="img/SuperWarVideo.jpg">
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href="img/SuperWar1.jpg" rel="shadowbox">
-            <img src="img/SuperWar1.jpg">
         </a>
       </div>
       <div class="swiper-slide">

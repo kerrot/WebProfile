@@ -1,5 +1,6 @@
 <!doctype html>
-<html><head>
+<html>
+<head>
 <meta charset="UTF-8">
 <title>TouhouARC</title>
 
@@ -39,24 +40,25 @@ overlayOpacity: 0.8,
 </div>
 </header>
 
-<p><span class="cap">【紹介】</span></p>
+<h1>TouhouARC</h1>
+<div><img class="logoImg" src="./img/ARC1.jpg"></div>
+
+<p><span class="cap">【紹介】</span>2D射撃ゲームの知名度が高い“東方Project”を模作したゲームです。膨大な数の弾（弾幕）の迫力、その中ですり抜ける緊張感はこういうゲームの一番のポイントです。</p>
 
 <p><span class="cap">【ジャンル】</span>2Dシューティング</p>
 <p><span class="cap">【言語、ツール】</span>C++, OpenGL, OpenAL, Visual Studio</p>
 <p><span class="cap">【チーム人数】</span>2人</p>
-<p><span class="cap">【担当】</span>リーダー、プログラマー（メインシステム）</p>
+<p><span class="cap">【担当】</span>リーダー、企画、プログラミング（システムインフラ）</p>
+<p><span class="cap">【制作期間】</span>2005/11（約一週間）</p>
+<p><span class="cap">【ソースコード】</span><a target="_blank" href="https://github.com/kerrot/TouhouARC">https://github.com/kerrot/TouhouARC</a></p>
 <p><span class="cap">【アピールポイント】</span>
 <ul>
-	<li><span class="appeal">遠近感のある画面：</span>
-    <p>背景を遠近感が見せるように設計しました。キャラクターが進むと前のオブジェクトが早く、後ろのものが遅く、列車上見える景色みたいに自然な感じを作り上げました。下の図は実際Unityで編集する様子です。</p></li>
-    <div><img class="logoImg" src="./img/3Dscene.jpg"></div>
-	<li><span class="appeal">ボスの巡回システム：</span>
-    <p>ボズは列車のような動きで巡回しでいますので、ルートが必要です。そこでUnityのEditorで直接に編集できるシステムを設計しました。ゲームを起動しなくでも編集できます。ボスの体は基本ルートの上に走っていて、体の向きだけ追尾させました。カクカクもしない滑らかな動きを意識しました。</p></li>
-	<video class="logoImg" autoplay loop>
-  		<source src="video/BossRoot.mp4" />
-	</video>
-	<li><span class="appeal">自由に組み立てられる仕組み：</span>
-    <p>プログラミングの面では、機能を分けて組み立てることができるようになっています。例えば、”敵に当たると死ぬ”、”ワイヤーに打たれると爆発する”この二つの仕様を、”敵に当たる”、”死ぬ”、”ワイヤーに打たれる”、”爆発する”４つの機能に分けて、自由に組み立てることによって、”敵に当たると爆発する”、”ワイヤーに打たれると死ぬ”みたいな機能もできます。こうしてプランナーは簡単に様々なことができて、作業の進み状況も大幅に早くなっています。</p></li>
+	<li><span class="appeal">弾幕の設計：</span>
+    <p>弾幕は一番力を入れたところです。跳ね返ったり、変速したり、追尾したり、絵の選択も弾の量と方向など、綺麗さと迫力を意識しつつ作っています。</p></li>
+	<li><span class="appeal">3Dの背景</span>
+    <p>2Dゲームですが、背景は3Dで作っています。そして背景を動かして、プレイヤーが進みような感じをします。</p></li>
+    <li><span class="appeal">レベルデザインの設置：</span>
+    <p>ゲームの中のものはすべていくつのパターンを準じて動くので、調整や拡張もし安いです。そして全部外部ファイルで編集できます。レベルデザインはとても便利。</p></li>
 </ul></p>
 
 <div class="swiper-container">
@@ -64,11 +66,6 @@ overlayOpacity: 0.8,
       <div class="swiper-slide">
         <a rel="shadowbox;player=iframe" href="https://www.youtube.com/embed/YrxV762q0Yo">
         	<img src="img/ARCVideo.jpg">
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href="img/ARC1.jpg" rel="shadowbox">
-            <img src="img/ARC1.jpg">
         </a>
       </div>
       <div class="swiper-slide">
