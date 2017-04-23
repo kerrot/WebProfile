@@ -58,19 +58,30 @@ overlayOpacity: 0.8,
 <p><span class="cap">【ジャンル】</span>3Dアクション</p>
 <p><span class="cap">【言語、ツール】</span>C#, Unity, Visual Studio</p>
 <p><span class="cap">【チーム人数】</span>５人</p>
-<p><span class="cap">【担当】</span>リーダー、マインプログラマー、プランナー</p>
+<p><span class="cap">【担当】</span>リーダー、メインプログラマー、プランナー</p>
 <p><span class="cap">【制作期間】</span>2016/04～現在</p>
 <p><span class="cap">【ソースコード】</span><a target="_blank" href="https://github.com/kerrot/BlackAndWhite">https://github.com/kerrot/BlackAndWhite</a></p>
 <p><span class="cap">【実行ファイル】</span><a target="_blank" href="https://github.com/kerrot/BlackAndWhite/releases/download/0.3.5/BAW0.3.5.zip">https://github.com/kerrot/BlackAndWhite/releases/download/0.3.5/BAW0.3.5.zip</a></p>
-<p><span class="cap">【アピールポイント】</span>
+<p><span class="cap">【アピールポイント】</span></p>
 <ul>
-	<li><span class="appeal">アクションの爽快感：</span>
-    <p>一番力を入れるのが３つの特徴、特に”一撃連鎖”の部分です。キャラクターのアニメーションを作って、動きのエフェクトを加え、敵が打たれた時の反動、爆発の効果音まで、様々な工夫をしました。そして連鎖の部分はだんだんスピードを加速し、テンポを早まって刺激感がてるように作り上げました。</p></li>
-	<li><span class="appeal">色や光と影の表現：</span>
-    <p>画面の構成はわざと黒と白にして、色の特殊さを強調するためです。ですが、そうすると色彩の扱いが難しくなります。そこでHDRを使い、BloomなどのImage Effectで光や色を調整しました。エフェクトもインパクトと分かりやすさのバランスをとりつつ、何回も作り直しました。</p></li>
-    <li><span class="appeal">ゲーム性による設計：</span>
-    <p>「色を混ぜることで違う力を生み出す」という概念で作り上げた仕様ですが、実際にどの色がどの能力か、これは戦闘の状況により設計しました。近づかない敵がるから遠距離攻撃のスキルを生み出す、罠ようなスキルもあり、活用したら、戦闘の難易度を大きく下がります。</p></li>
-</ul></p>
+	<li id="noMark">実際に市場に売れる程のゲームを想定し、様々な場面で使われる手法やシステムを実装しました。できるだけUnityの機能を発揮する土台を作りました。詳細は以下：</li>
+	<li><span class="appeal">物理と衝突判定：</span>
+    <p>攻撃や爆破で、オブジェクトが撃退され、コリジョンによる移動阻害など、その強さや有効無効を設定するシステム。</p></li>
+    <li><span class="appeal">アニメーション：</span>
+    <p>基本AnimatorのStateから、Root Animationを使い、移動の速度をアニメーションに合わせることができます。アニメーションのイベントで精確なタイミングでエフェクトや衝突判定を行います。さらに、スクリプトで制御し、物理からの影響も問題ありません。</p></li>
+    <li><span class="appeal">ナビゲーションとAI：</span>
+    <p>敵の移動は基本Unityのナビゲーションに沿って、root motionの移動量で行います。基本簡単なパタンに分けて、プレーヤーへの距離を判定し、攻撃やテレポートなどの行為を選びます。</p></li>
+    <li><span class="appeal">エフェクト</span>
+    <p>パーティクルシステムのパラメーターや生成制御、トレイルレンダラーの開始や停止制御など。</p></li>
+    <li><span class="appeal">カメラワーク</span>
+    <p>カメラをあるオブジェクトを追跡することやアニメーションでルートを決めるなど、カメラ振動の機能もあります。</p></li>
+    <li><span class="appeal">UI表現</span>
+    <p>意図的にUIを減らすの手法で、事件に合わせてUIを現れます。普段画面上はスキルUIしかありません。</p></li>
+    <li><span class="appeal">光と色の表現</span>
+    <p>基本黒と白の画面で、色のあるものを強調します。発光やサーチライトなどの効果を使っています。</p></li>
+    <li><span class="appeal">イメージエフェクト</span>
+    <p>UnityのStandard Assetsで、地面の反射（Screen Space Reflection）、HDRに合わせて発光効果（Bloom）、危険状態（Noise、Vignette）など沢山実装しています。</p></li>
+</ul>
 
   <div class="swiper-container">
     <div class="swiper-wrapper">
