@@ -59,30 +59,17 @@ overlayOpacity: 0.8,
 <p><span class="cap">【言語、ツール】</span>C#, Unity, Visual Studio</p>
 <p><span class="cap">【チーム人数】</span>５人</p>
 <p><span class="cap">【担当】</span>リーダー、メインプログラマー、プランナー</p>
-<p><span class="cap">【制作期間】</span>2016/04～現在</p>
+<p><span class="cap">【制作期間】</span>10か月</p>
 <p><span class="cap">【ソースコード】</span><a target="_blank" href="https://github.com/kerrot/BlackAndWhite">https://github.com/kerrot/BlackAndWhite</a></p>
 <p><span class="cap">【実行ファイル】</span><a target="_blank" href="https://github.com/kerrot/BlackAndWhite/releases/download/0.3.5/BAW0.3.5.zip">https://github.com/kerrot/BlackAndWhite/releases/download/0.3.5/BAW0.3.5.zip</a></p>
 <p><span class="cap">【アピールポイント】</span></p>
 <ul>
-	<li id="noMark">実際に市場に売れる程のゲームを想定し、様々な場面で使われる手法やシステムを実装しました。Unityの機能を沢山使い、それを制御するシステムを設計しました。詳細は以下：</li>
-	<li><span class="appeal">物理と衝突判定：</span>
-    <p>攻撃や爆破で、オブジェクトが撃退され、コリジョンによる移動阻害など、その強さや有効無効を設定するシステム。</p></li>
-    <li><span class="appeal">アニメーション：</span>
-    <p>基本AnimatorのStateから、Root Animationを使い、移動の速度をアニメーションに合わせることができます。アニメーションのイベントで精確なタイミングでエフェクトや衝突判定を行います。さらに、スクリプトで制御し、物理からの影響も問題ありません。</p></li>
-    <li><span class="appeal">ナビゲーションとAI：</span>
-    <p>敵の移動は基本Unityのナビゲーションに沿って、root motionの移動量で行います。基本簡単なパタンに分けて、プレーヤーへの距離を判定し、攻撃やテレポートなどの行為を選びます。</p></li>
-    <li><span class="appeal">エフェクト</span>
-    <p>パーティクルシステムのパラメーターや生成制御、トレイルレンダラーの開始や停止制御など。</p></li>
-    <li><span class="appeal">カメラワーク</span>
-    <p>カメラをあるオブジェクトを追跡することやアニメーションでルートを決めるなど、カメラ振動のエフェクトもあります。</p></li>
-    <li><span class="appeal">スローモーション</span>
-    <p>TimeScaleを操作し、Animation Speedと合わせてプレーヤーだけ加速しているような効果が出来ました。</p></li>
-    <li><span class="appeal">UI表現</span>
-    <p>意図的にUIを減らすの手法で、事件が起こる時点しかUIが現れません。普段の時、画面上はスキルUIしかありません。</p></li>
-    <li><span class="appeal">光と色の表現</span>
-    <p>基本黒と白の画面で、色のあるものを強調します。発光やサーチライトなどの効果を使っています。</p></li>
-    <li><span class="appeal">イメージエフェクト</span>
-    <p>UnityのStandard Assetsで、地面の反射（Screen Space Reflection）、HDRに合わせて発光効果（Bloom）、危険状態（Noise、Vignette）など沢山実装しています。</p></li>
+	<li><span class="appeal">モーションに合わせた反応：</span>
+    <p>root ｍotionという手法で、移動の速度をアニメーションに合わせることができます。アニメーションのイベントで精確なタイミングで判定を行っています。敵が攻撃が命中した瞬間で、エフェクトが出で物理により撃退されなど、スムーズ感が出るように作りました。</p></li>
+    <li><span class="appeal">光と影、色の対照の表現：</span>
+    <p>地面の反射（Screen Space Reflection）、サーチライト（Volumetric Lighting）、発光効果（Bloom）など、光と影について研究して実装しています。一般は黒白の画面なんですが、その以外の色で「属性」というゲームシステムを強調しています。見やすいように何回も調整していました。</p></li>
+    <li><span class="appeal">演出の工夫：</span>
+    <p>分身のような残像、刀のきらめきなどのエフェクトで迫力を強化します。カメラワークやカメラの振動もあり、演出する時よく使われる方法も実装しています。必殺技を発動瞬間、時間が止まりの演出、発動中スローモーションになる効果など、いろいろ工夫していました。</p></li>
 </ul>
 
   <div class="swiper-container">
